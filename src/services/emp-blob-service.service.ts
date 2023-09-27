@@ -7,13 +7,15 @@ import { employee } from 'src/app/employee';
   providedIn: 'root'
 })
 export class EmpBlobServiceService {
-  private apiUrl = 'https://localhost:7058/api/Blob'
-  // upload api call https://localhost:7058/api/Blob/addEmployee
-  //get all employees https://localhost:7058/api/Blob/getEmployees
-  // delete https://localhost:7058/api/Blob/deleteEmployee/veera
+  private apiUrl = 'https://localhost:7166/Employees'
+ 
 
-  // update api call https://localhost:7058/api/Blob/UpdateEmployeeFromAllContainers/veera
- //                  https://localhost:7058/api/Blob/UpdateEmployeeFromAllContainers/veera
+  // upload call https://localhost:7166/Employees/addEmployee
+  // getbyid call https://localhost:7166/Employees/employeeId?employeId=21157  https://localhost:7166/Employees/employeeId?employeId=21012
+  //getall call https://localhost:7166/Employees/GetAllemployees
+  // delete call https://localhost:7166/Employees/employeeId?employeeID=23432 https://localhost:7166/Employees/employeeId?employeeID=23218
+  // update call https://localhost:7166/Employees/21157
+  
    constructor(private http: HttpClient) { }
 
   uploadEmployeeData(employee: any): Observable<any> {
@@ -21,26 +23,24 @@ export class EmpBlobServiceService {
 
   }
 
-  ViewEmployeeData(employeeName:string):Observable<employee>{
-    return this.http.get<employee>(`${this.apiUrl}/getEmployee/${employeeName}`)
+  ViewEmployeeData(employeeId:number):Observable<employee>{
+    return this.http.get<employee>(`${this.apiUrl}/employeeId?employeId=${employeeId}`)
+
   }
  
-  UpdateEmployee(employeeName:string, employee:employee):Observable<any>{
+  UpdateEmployee(employeeId:number, employee:employee):Observable<any>{
     // const employeeName = `${employee.firstName} ${employee.lastName}`;
 
   // Send the full name as part of the request URL
-  return this.http.put(`${this.apiUrl}/updateEmployee/${employeeName}`, employee);
+  return this.http.put(`${this.apiUrl}/${employeeId}`, employee);
   }
 
   getAllEmployees(): Observable<employee[]> {
-    return this.http.get<employee[]>(`${this.apiUrl}/getEmployeesFromContainer`)
+    return this.http.get<employee[]>(`${this.apiUrl}/GetAllemployees`)
   }
 
-  deleteEmployee(employeeName:string){
-    return this.http.delete<employee>(`${this.apiUrl}/deleteEmployee/${employeeName}`)
+  deleteEmployee(employeeId:number){
+    return this.http.delete<employee>(`${this.apiUrl}/employeeId?employeeId=${employeeId}`)
   }
-  getContainers(): Observable<employee[]> {
-    return this.http.get<employee[]>(`${this.apiUrl}/containers`)
-  }
-  
+ 
 }

@@ -9,27 +9,27 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./get-employeedetails.component.css']
 })
 export class GetEmployeedetailsComponent implements OnInit {
-  employeeName: string | null = null;
+  employeeId: number | null = null;
   employee !: employee
   employees !: employee[];
   constructor(private service: EmpBlobServiceService, private route: ActivatedRoute,
     private router: Router) { }
   ngOnInit(): void {
-    const employeeNameParam = this.route.snapshot.paramMap.get('employeeName');
-    if (employeeNameParam !== null) {
-      this.employeeName = employeeNameParam;
-      this.loadEmployeeDetails(this.employeeName);
+    const employeeIdParam = this.route.snapshot.paramMap.get('employeeId');
+    if (employeeIdParam !== null) {
+      this.employeeId = Number(employeeIdParam);
+      this.loadEmployeeDetails(this.employeeId);
     } else {
       console.error(`Employee name parameter not found.`);
     }
   }
-  loadEmployeeDetails(employeeName: string) {
-    this.service.ViewEmployeeData(employeeName).subscribe(employee => {
+  loadEmployeeDetails(employeeId: number) {
+    this.service.ViewEmployeeData(employeeId).subscribe(employee => {
       if (employee) {
         this.employee = employee
       }
       else {
-        console.error(`Employee with full name ${employeeName} not found.`);
+        console.error(`Employee with full name ${employeeId} not found.`);
       }
     }
     )
@@ -38,7 +38,7 @@ export class GetEmployeedetailsComponent implements OnInit {
     // Navigate back to the employee list component
     this.router.navigate(['/get-employees']);
   }
-  editEmployee(employeeName: string) {
-    this.router.navigate(['/edit-employee', employeeName]);
+  editEmployee(employeeId: string) {
+    this.router.navigate(['/edit-employee', employeeId]);
   }
 }

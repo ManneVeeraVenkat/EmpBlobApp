@@ -5,6 +5,10 @@
         <table class="table table-bordered">
           <tbody>
             <tr>
+              <th>EmployeeId:</th>
+              <td>{{ employee.employeeId }}</td>
+            </tr>
+            <tr>
               <th>First Name:</th>
               <td>{{ employee.firstName }}</td>
             </tr>
@@ -14,7 +18,7 @@
             </tr>
             <tr>
               <th>Position:</th>
-              <td>{{ employee.position }}</td>
+              <td>{{ employee.desigination }}</td>
             </tr>
             <tr>
               <th>Location:</th>
@@ -24,10 +28,7 @@
               <th>Department:</th>
               <td>{{ employee.department }}</td>
             </tr>
-            <tr>
-              <th>City:</th>
-              <td>{{ employee.city }}</td>
-            </tr>
+            
             <tr>
               <th>Skill:</th>
               <td>{{ employee.skill }}</td>
@@ -38,7 +39,7 @@
             </tr>
           </tbody>
         </table>
-        <button (click)="editEmployee(employee.firstName + ' ' + employee.lastName)">Edit</button> 
+        <button (click)="editEmployee(employee.firstName)">Edit</button> 
         <button class="btn btn-primary" (click)="goBack()">Employee List</button>
 
       </div>

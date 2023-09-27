@@ -23,20 +23,20 @@ export class GetAllEmployeesComponent implements OnInit {
     this.service.getAllEmployees().subscribe(data => {
       this.employees = data})
   }
-  deleteEmployee(employeeName: string): void {
+  deleteEmployee(employeeId: number): void {
     if (confirm('Are you sure you want to delete this employee?')) {
-      this.service.deleteEmployee(employeeName).subscribe(() => {
+      this.service.deleteEmployee(employeeId).subscribe(() => {
         // Employee deleted, refresh the list
          this.loadEmployeess();
       });
     }
   }
 
-  viewEmployeeDetails(employeeName:string){
-    this.router.navigate(['/employee-details', employeeName]);
+  viewEmployeeDetails(employeeId:number){
+    this.router.navigate(['/employee-details', employeeId]);
   }
-  editEmployee(employeeName: string) {
-    this.router.navigate(['/edit-employee', employeeName]);
+  editEmployee(employeeId: number) {
+    this.router.navigate(['/edit-employee', employeeId]);
   }
   
   // viewEmployeeDetails(employeeName:string){
