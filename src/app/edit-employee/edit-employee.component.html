@@ -1,0 +1,97 @@
+<!-- employee-edit.component.html -->
+<div class="container">
+    <h2>Edit Employee</h2>
+    <form (ngSubmit)="onSubmit()" #employeeForm="ngForm">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="firstName"
+          name="firstName"
+          [(ngModel)]="employee.firstName"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="lastName"
+          name="lastName"
+          [(ngModel)]="employee.lastName"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="position">Position</label>
+        <input
+          type="text"
+          class="form-control"
+          id="position"
+          name="position"
+          [(ngModel)]="employee.position"
+        />
+      </div>
+      <div class="form-group">
+        <label for="department">Department</label>
+        <input
+          type="text"
+          class="form-control"
+          id="department"
+          name="department"
+          [(ngModel)]="employee.department"
+        />
+      </div>
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input
+          type="text"
+          class="form-control"
+          id="location"
+          name="location"
+          [(ngModel)]="employee.location"
+        />
+      </div>
+      <div class="form-group">
+        <label for="city">City</label>
+        <input
+          type="text"
+          class="form-control"
+          id="city"
+          name="city"
+          [(ngModel)]="employee.city"
+        />
+      </div>
+      <div class="form-group">
+        <label for="skill">Skill</label>
+        <input
+          type="text"
+          class="form-control"
+          id="skill"
+          name="skill"
+          [(ngModel)]="employee.skill"
+        />
+      </div>
+      <div class="form-group">
+        <label for="salary">Salary</label>
+        <input
+          type="number"
+          class="form-control"
+          id="salary"
+          name="salary"
+          [(ngModel)]="employee.salary"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Save Changes</button>
+      <!-- <button
+        type="button"
+        class="btn btn-secondary"
+        (click)="goBack()"
+      >
+        Cancel
+      </button> -->
+    </form>
+  </div>
+  

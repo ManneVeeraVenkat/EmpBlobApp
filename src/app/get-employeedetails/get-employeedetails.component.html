@@ -1,0 +1,47 @@
+<div class="container mt-3">
+    <h2>Employee Details</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <table class="table table-bordered">
+          <tbody>
+            <tr>
+              <th>First Name:</th>
+              <td>{{ employee.firstName }}</td>
+            </tr>
+            <tr>
+              <th>Last Name:</th>
+              <td>{{ employee.lastName }}</td>
+            </tr>
+            <tr>
+              <th>Position:</th>
+              <td>{{ employee.position }}</td>
+            </tr>
+            <tr>
+              <th>Location:</th>
+              <td>{{ employee.location }}</td>
+            </tr>
+            <tr>
+              <th>Department:</th>
+              <td>{{ employee.department }}</td>
+            </tr>
+            <tr>
+              <th>City:</th>
+              <td>{{ employee.city }}</td>
+            </tr>
+            <tr>
+              <th>Skill:</th>
+              <td>{{ employee.skill }}</td>
+            </tr>
+            <tr>
+              <th>Salary:</th>
+              <td>{{ employee.salary }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <button (click)="editEmployee(employee.firstName + ' ' + employee.lastName)">Edit</button> 
+        <button class="btn btn-primary" (click)="goBack()">Employee List</button>
+
+      </div>
+    </div>
+  </div>
+  

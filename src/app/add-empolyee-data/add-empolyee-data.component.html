@@ -1,0 +1,68 @@
+<!-- <div>
+    <label for="containerName">Container Name:</label>
+        <input type="text" [(ngModel)]="containerName"  placeholder="Container Name">
+
+        <label for="employeeName">Employee Name:</label>
+        <input type="text" [(ngModel)]="employeeName"  placeholder="employeeName">
+
+    <form [formGroup]="employee" (ngSubmit)="onSubmit(employee.value)">
+       
+        <table>
+            <thead>
+                 <tr><td> Id</td><td><input type="number" id="name" required formControlName="Id"/></td></tr>
+                <tr><td> FirstName:</td><td><input type="text" id="description" required formControlName="FirstName"/></td></tr>
+                <tr><td> LastName:</td><td><input type="text" id="targetDate" required formControlName="LastName"/></td></tr>
+                <tr><td>Position:</td><td><input type="text" id="status" required formControlName="Position"/></td></tr>
+                <tr><td>Department:</td><td><input type="text" id="priority" required formControlName="Department"/></td></tr>
+                <tr><td>Location:</td><td><input type="text" id="tag" required formControlName="Location"/></td></tr>
+                <tr><td>City:</td><td><input type="text" id="userId" required formControlName="City"/></td></tr>
+                <tr><td>Skill:</td><td><input type="text" id="userId" required formControlName="Skill"/></td></tr>
+                <tr><td>Salary:</td><td><input type="number" id="userId" required formControlName="Salary"/></td></tr>
+                <tr><td><button type="submit" class="btn btn-success" value="submit">Submit</button></td></tr>
+            </thead>
+        </table>
+    </form>
+</div> -->
+
+<div>
+    <form [formGroup]="employee" (ngSubmit)="onSubmit()">
+      
+
+        <label for="Id">Id:</label>
+        <input type="number" id="Id" formControlName="Id" />
+
+        <label for="FirstName">First Name:</label>
+        <input type="text" id="FirstName" formControlName="FirstName" />
+
+        <label for="LastName">Last Name:</label>
+        <input type="text" id="LastName" formControlName="LastName" />
+
+        <label for="Position">Position:</label>
+        <input type="text" id="Position" formControlName="Position" />
+
+        <label for="Department">Department:</label>
+        <input type="text" id="Department" formControlName="Department" />
+
+        <label for="Location">Location:</label>
+        <input type="text" id="Location" formControlName="Location" />
+
+        <label for="City">City:</label>
+        <input type="text" id="City" formControlName="City" />
+
+        <label for="Skill">Skill:</label>
+        <input type="text" id="Skill" formControlName="Skill" />
+
+        <label for="">Salary:</label>
+        <input type="number" id="Salary" formControlName="Salary" />
+
+       
+
+        <button type="submit" class="btn btn-success">Submit</button>
+        <button type="submit" class="btn btn-success" (click)="goBack()">Employee List</button>
+    </form>
+</div>
+
+
+
+
+

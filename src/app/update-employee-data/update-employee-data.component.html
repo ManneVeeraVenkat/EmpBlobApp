@@ -1,0 +1,29 @@
+<form [formGroup]="updatemployee" (ngSubmit)="onSubmit()">
+   
+  
+    <label for="FirstName">First Name:</label>
+    <input type="text" id="FirstName" formControlName="FirstName" />
+
+    <label for="LastName">Last Name:</label>
+    <input type="text" id="LastName" formControlName="LastName" />
+
+    <label for="Position">Position:</label>
+    <input type="text" id="Position" formControlName="Position" />
+
+    <label for="Department">Department:</label>
+    <input type="text" id="Department" formControlName="Department" />
+
+    <label for="Location">Location:</label>
+    <input type="text" id="Location" formControlName="Location" />
+
+    <label for="City">City:</label>
+    <input type="text" id="City" formControlName="City" />
+
+    <label for="Skill">Skill:</label>
+    <input type="text" id="Skill" formControlName="Skill" />
+
+    <label for="">Salary:</label>
+    <input type="number" id="Salary" formControlName="Salary" />
+
+    <button type="submit">Update Employee Data</button>
+</form>
