@@ -11,13 +11,12 @@
     <table class="table table-striped" border="2">
         <thead div class="container-fluid" style="background-color:bl">
             <tr>
-                <th>Id</th>
+                <th>EmployeeId</th>
                 <th>FirstName</th>
                 <th>LastName</th>
                 <th>Position</th>
                 <th>Location</th>
                 <th>Department</th>
-                <th>City</th>
                 <th>Skill</th>
                 <th>Salary</th>
                 <th width="250px">Action</th>
@@ -27,21 +26,20 @@
 
             <!-- <tr *ngFor="let tasks of task | filter:searchedKeyword |paginate:{itemsPerPage: 10,currentPage:pages}"> -->
             <tr *ngFor="let employee of employees">
-                <td>{{ employee.id }}</td>
+                <td>{{ employee.employeeId }}</td>
                 <td>{{ employee.firstName }}</td>
                 <td>{{ employee.lastName }}</td>
-                <td>{{ employee.position }}</td>
+                <td>{{ employee.desigination }}</td>
                 <td>{{ employee.location}}</td>
                 <td>{{ employee.department }}</td>
-                <td>{{ employee.city}}</td>
                 <td>{{ employee.skill }}</td>
                 <td>{{ employee.salary }}</td>
 
 
                 <td>
-                    <button (click)="viewEmployeeDetails(employee.firstName + ' ' + employee.lastName)">View</button>
-                    <button (click)="editEmployee(employee.firstName + ' ' + employee.lastName)">Edit</button> 
-                    <button (click)="deleteEmployee(employee.firstName + '' + employee.lastName)">Delete</button>
+                    <button (click)="viewEmployeeDetails(employee.employeeId)">View</button>
+                    <button (click)="editEmployee(employee.employeeId)">Edit</button> 
+                    <button (click)="deleteEmployee(employee.employeeId)">Delete</button>
                 </td>
 
 

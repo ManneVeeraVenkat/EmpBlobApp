@@ -1,11 +1,11 @@
 export class employee{
     id!:number
+    employeeId!:number;
     firstName !: string
     lastName!: string
-    position!:string
+    desigination!:string
     department!: string
     location !: string
-    city !: string
     skill !: string
     salary!: number
 }

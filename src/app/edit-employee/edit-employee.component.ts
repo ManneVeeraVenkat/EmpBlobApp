@@ -10,7 +10,7 @@ import { EmpBlobServiceService } from 'src/services/emp-blob-service.service';
 })
 export class EditEmployeeComponent {
   employee: employee = new employee(); // Initialize with empty employee data
-  employeeName: string | null = null;
+  employeeId: number | null = null;
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -23,15 +23,15 @@ export class EditEmployeeComponent {
   
     // Check if employeeNameParam is not null before assigning it
     if (employeeNameParam !== null) {
-      this.employeeName = employeeNameParam;
+      this.employeeId = Number(employeeNameParam);
   
       // Retrieve the employee data by name and populate the form
-      this.service.ViewEmployeeData(this.employeeName).subscribe((data) => {
+      this.service.ViewEmployeeData(this.employeeId).subscribe((data) => {
         if (data) {
           this.employee = data;
         } else {
           // Handle the case where the employee data is not found
-          console.error(`Employee with name ${this.employeeName} not found.`);
+          console.error(`Employee with name ${this.employeeId} not found.`);
         }
       });
     } else {
@@ -41,9 +41,9 @@ export class EditEmployeeComponent {
   
   onSubmit(): void {
     // Check if employeeName is not null before updating the employee data
-    if (this.employeeName !== null) {
+    if (this.employeeId !== null) {
       // Update the employee data using the service
-      this.service.UpdateEmployee(this.employeeName, this.employee).subscribe(() => {
+      this.service.UpdateEmployee(this.employeeId, this.employee).subscribe(() => {
         // Employee updated, navigate back to the employee list
         this.router.navigate(['/get-employees']);
       });

@@ -25,13 +25,12 @@ export class AddEmpolyeeDataComponent implements OnInit {
 
     this.employee = new FormGroup({
      
-      Id: new FormControl(),
+      EmployeeId: new FormControl(),
       FirstName: new FormControl(),
       LastName: new FormControl(),
-      Position: new FormControl(),
+      Desigination: new FormControl(),
       Department: new FormControl(),
       Location: new FormControl(),
-      City: new FormControl(),
       Skill: new FormControl(),
       Salary: new FormControl(),
 
