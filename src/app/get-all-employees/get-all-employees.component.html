@@ -6,8 +6,31 @@
         </li>
     </ul>
 </div> -->
+<!-- <input type="text" class="global-search ui-autocomplete-input"  placeholder="Search by Employee Name, Designation or Department" autocomplete="off"> -->
+<div class="search-container" >
+    
+    <input type="text" placeholder="Search" align="center" [(ngModel)]="searchkey" class="search-input" (input)="search()" />
+    <button (click)="search()" class="search-button">Search</button>
+  </div>
+
+  <!-- <div class="filter-controls">
+    <label for="cityFilter">City:</label>
+    <input type="text" id="cityFilter" [(ngModel)]="cityFilter" />
+
+    <label for="jobFilter">Job:</label>
+    <input type="text" id="jobFilter" [(ngModel)]="jobFilter" />
+
+    <button (click)="applyFilters()">Apply Filters</button>
+    <button (click)="resetFilters()">Reset Filters</button>
+  </div> -->
+
+
+
+  
+
 
 <div>
+
     <table class="table table-striped" border="2">
         <thead div class="container-fluid" style="background-color:bl">
             <tr>
@@ -24,8 +47,8 @@
         </thead>
         <tbody>
 
-            <!-- <tr *ngFor="let tasks of task | filter:searchedKeyword |paginate:{itemsPerPage: 10,currentPage:pages}"> -->
-            <tr *ngFor="let employee of employees">
+            <!--search  <tr *ngFor="let tasks of task | filter:searchedKeyword |paginate:{itemsPerPage: 10,currentPage:pages}"> -->
+            <tr *ngFor="let employee of employees |paginate:{itemsPerPage:5,currentPage:currentPage}">
                 <td>{{ employee.employeeId }}</td>
                 <td>{{ employee.firstName }}</td>
                 <td>{{ employee.lastName }}</td>
@@ -38,15 +61,20 @@
 
                 <td>
                     <button (click)="viewEmployeeDetails(employee.employeeId)">View</button>
-                    <button (click)="editEmployee(employee.employeeId)">Edit</button> 
+                    <button (click)="editEmployee(employee.employeeId)">Edit</button>
                     <button (click)="deleteEmployee(employee.employeeId)">Delete</button>
                 </td>
 
-
+              
             </tr>
         </tbody>
     </table>
+
 </div>
+<pagination-controls  (pageChange)="currentPage=$event" align="center"></pagination-controls>
+<!-- <pagination-controls  (pageChange)="renderPage($event)" align="center"></pagination-controls> -->
+
+
 <!-- <div *ngIf="selectedEmployee">
     <h2>Employee Details</h2>
     <table>

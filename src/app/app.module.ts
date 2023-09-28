@@ -9,8 +9,9 @@ import { AddEmpolyeeDataComponent } from './add-empolyee-data/add-empolyee-data.
 import { GetAllEmployeesComponent } from './get-all-employees/get-all-employees.component';
 import { UpdateEmployeeDataComponent } from './update-employee-data/update-employee-data.component';
 import { GetEmployeedetailsComponent } from './get-employeedetails/get-employeedetails.component';
-// import { EditEmployeedetailsComponent } from './edit-employeedetails/edit-employeedetails.component';
 import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { SortPipe } from './CustomSortPipe';
 
 @NgModule({
   declarations: [
@@ -19,15 +20,19 @@ import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
     GetAllEmployeesComponent,
     UpdateEmployeeDataComponent,
     GetEmployeedetailsComponent,
-    // EditEmployeedetailsComponent,
-    EditEmployeeComponent
+    EditEmployeeComponent,
+    SortPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    NgxPaginationModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
