@@ -1,71 +1,70 @@
 div {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #3a4472;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #a6cdef;
-  }
-  
-  /* Style for labels */
-  label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  
-  /* Style for input fields */
-/* input[type="text"],
-  input[type="number"] {
-    width: 100%;
-    padding: 8px;
-    margin-top: 4px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  } 
-  
-  
-  /* Style for submit button */
-  button[type="submit"] {
-    background-color: #4c68af;
-    color: rgb(122, 184, 225);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  input[type="text"],
-input[type="number"] {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #745199;
-    border-radius: 2px;
-    margin-bottom: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid #3a2394;
+  border-radius: 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #a6b8ef;
 }
 
-  
-  /* Style for submit button on hover */
-  button[type="submit"]:hover {
-    background-color: #45a049;
-  }
-  
-  /* Style for form element focus */
-  input[type="text"]:focus,
-  input[type="number"]:focus {
-    outline: none;
-    border-color: #1a611d;
-    box-shadow: 0 0 5px #4caf50;
-  }
-  .success-message {
-    color: green;
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  
-  .table tbody tr:hover {
-    background-color: rgb(112, 109, 109);
+/* Style for labels */
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Style for input fields */
+/* input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+} 
+
+
+/* Style for submit button */
+button[type="submit"] {
+  color: rgb(122, 184, 225);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #745199;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+
+/* Style for submit button on hover */
+button[type="submit"]:hover {
+  background-color: #a7a1b1;
+}
+
+/* Style for form element focus */
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: #1a611d;
+  box-shadow: 0 0 5px #4caf50;
+}
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.table tbody tr:hover {
+  background-color: rgb(112, 109, 109);
 }

@@ -1,6 +1,6 @@
 
   /* Search bar container */
-div.search-container {
+  div.search-container {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -49,6 +49,20 @@ div.search-container {
     color: rgb(78, 129, 124);
 
 }
+/* styles.css or your component-specific CSS file */
+.custom-button {
+  background-color: rgb(69, 214, 17);
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  color: black;
+  text-decoration: none;
+  cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
+}
+
+.custom-button:hover {
+  background-color: lightgreen; /* Change background color on hover */
+}
+
 
 /* Add some styling to table rows */
 .table tbody th tr {
@@ -61,7 +75,8 @@ div.search-container {
         padding-left: 5px;
       }
 th{
-      color: white;
+      color: black;
+      background-color: palevioletred;
 }
 
 .table tbody tr:hover{
@@ -71,7 +86,7 @@ div {
     
     margin: 30px auto; /* Center-align the div horizontally */
     max-width: 1000px; /* Set a maximum width for the div */
-    padding: 20px;
+    padding: 15px;
     border: 1px solid #725959;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(217, 211, 211, 0.1);
@@ -92,4 +107,5 @@ td,th{
   width: 70%;
   text-align: center;
 } */
+
 

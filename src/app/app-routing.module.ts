@@ -8,6 +8,7 @@ import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 
 const routes: Routes = [
   // {path:'home',component:HomeComponent},
+  {path:"", component:GetAllEmployeesComponent},
   { path: 'add-employee', component: AddEmpolyeeDataComponent},
   { path: 'get-employees', component: GetAllEmployeesComponent },
   { path: 'employees', component: GetAllEmployeesComponent },
