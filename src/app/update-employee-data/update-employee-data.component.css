@@ -1,54 +1,54 @@
 /* Add styling to the form */
 form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 30px;
-    border: 1px solid#5e694c;
-    border-radius: 5px;
-    background-color:  #a6cdef;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid#5e694c;
+  border-radius: 5px;
+  background-color:  #a6cdef;
 }
 
 /* Add styling to the labels */
 label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 /* Add styling to the input fields */
 input[type="text"],
 input[type="number"] {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #745199;
-    border-radius: 2px;
-    margin-bottom: 10px;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #745199;
+  border-radius: 2px;
+  margin-bottom: 10px;
 }
 
 /* Add styling to the submit button */
 button[type="submit"] {
-    background-color: #8f366d;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+  background-color: #8f366d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
 }
 label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  th, td {
-    padding: 80px;
-  }
-  th, td {
-    padding-top: 30px;
-    padding-bottom: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+th, td {
+  padding: 80px;
+}
+th, td {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
 /* Change button color on hover */
 button[type="submit"]:hover {
-    background-color: #3ead60;
+  background-color: #3ead60;
 }

@@ -38,7 +38,7 @@ export class GetEmployeedetailsComponent implements OnInit {
     // Navigate back to the employee list component
     this.router.navigate(['/get-employees']);
   }
-  editEmployee(employeeId: string) {
+  editEmployee(employeeId: number) {
     this.router.navigate(['/edit-employee', employeeId]);
   }
 }

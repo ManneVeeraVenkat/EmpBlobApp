@@ -7,11 +7,19 @@
     </ul>
 </div> -->
 <!-- <input type="text" class="global-search ui-autocomplete-input"  placeholder="Search by Employee Name, Designation or Department" autocomplete="off"> -->
+
+
 <div class="search-container" >
     
     <input type="text" placeholder="Search" align="center" [(ngModel)]="searchkey" class="search-input" (input)="search()" />
     <button (click)="search()" class="search-button">Search</button>
+
+    &nbsp;
+&nbsp;
+<button routerLink="/add-employee" class="custom-button">Add Employee</button>
   </div>
+
+  
 
   <!-- <div class="filter-controls">
     <label for="cityFilter">City:</label>
@@ -32,7 +40,7 @@
 <div>
 
     <table class="table table-striped" border="2">
-        <thead div class="container-fluid" style="background-color:bl">
+        <thead div class="container-fluid"  style="color:red;;">
             <tr>
                 <th>EmployeeId</th>
                 <th>FirstName</th>
@@ -60,7 +68,7 @@
 
 
                 <td>
-                    <button (click)="viewEmployeeDetails(employee.employeeId)">View</button>
+                    <button (click)="viewEmployeeDetails(employee.employeeId)" >View</button>
                     <button (click)="editEmployee(employee.employeeId)">Edit</button>
                     <button (click)="deleteEmployee(employee.employeeId)">Delete</button>
                 </td>
