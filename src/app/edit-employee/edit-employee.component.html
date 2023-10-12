@@ -75,6 +75,20 @@
           [(ngModel)]="employee.salary"
         />
       </div>
+      
+      <div class="form-group">
+        <label for="profilePicture">Profile Picture:</label>
+        <img *ngIf="profilePicture" [src]="profilePicture" alt="Profile Picture">
+        <input
+          type="file"
+          id="profilePicture"
+          name="profilePicture"
+          accept="image/*"
+          (change)="handleFileInput($event)"
+        />
+      </div>
+      
+      
       <button type="submit" class="btn btn-primary">Save Changes</button>
       <!-- <button
         type="button"

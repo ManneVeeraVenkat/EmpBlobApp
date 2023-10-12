@@ -37,6 +37,12 @@
               <th>Salary:</th>
               <td>{{ employee.salary }}</td>
             </tr>
+            <tr>
+              <th>Profile Picture:</th>
+              <td>
+                <img class="profilepic" [src]="'data:image/jpeg;base64,' + employeeImage" alt="Profile Picture" *ngIf="employeeImage" />
+              </td>
+          </tr>
           </tbody>
         </table>
         <button (click)="editEmployee(employee.employeeId)">Edit</button> 

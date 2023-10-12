@@ -76,7 +76,7 @@
       }
 th{
       color: black;
-      background-color: palevioletred;
+      background-color: #0dcaf0;
 }
 
 .table tbody tr:hover{
@@ -87,10 +87,10 @@ div {
     margin: 30px auto; /* Center-align the div horizontally */
     max-width: 1000px; /* Set a maximum width for the div */
     padding: 15px;
-    border: 1px solid #725959;
+    border: 1px solid #0dcaf0;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(217, 211, 211, 0.1);
-    background-color: #dadcdf; /* Background color */
+    background-color:#0dcaf0; /* Background color */
 }
 button{
     align:center;

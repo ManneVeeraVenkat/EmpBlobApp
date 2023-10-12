@@ -37,7 +37,7 @@ export class UpdateEmployeeDataComponent implements OnInit {
       const employeeName = this.updatemployee.value.employeeName;
       const UpdatedEmployeeData = this.updatemployee.value;
 
-      this.service.UpdateEmployee(employeeName,UpdatedEmployeeData)
+      this.service.updateEmployeeWithProfilePic(employeeName,UpdatedEmployeeData)
         .subscribe(
           response => {
             console.log('Employee data updated successfully', response);
