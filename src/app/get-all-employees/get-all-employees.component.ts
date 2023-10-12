@@ -93,32 +93,7 @@ export class GetAllEmployeesComponent implements OnInit {
 
   }
 
-  // applyFilters(): void {
-  //   // Apply filters to the employees array
-  //   this.employees = this.employees
-  //     .filter(employee => {
-  //       if (this.cityFilter && !employee.location.toLowerCase().includes(this.cityFilter.toLowerCase())) {
-  //         return false; // Filter out employees that do not match the city filter
-  //       }
-  
-  //       if (this.jobFilter && !employee.department.toLowerCase().includes(this.jobFilter.toLowerCase())) {
-  //         return false; // Filter out employees that do not match the job filter
-  //       }
-  
-  //       // Add more filter conditions for other properties as needed
-  
-  //       return true; // Include the employee if it passes all filters
-  //     })
-  //     .slice((this.currentPage - 1) * this.itemsPerPage, this.currentPage * this.itemsPerPage);
-  // }
 
-  // resetFilters(): void {
-  //   this.cityFilter = '';
-  //   this.jobFilter = '';
-  //   // Reset other filters as needed
-  //   this.applyFilters(); // Apply filters to reset the displayed employees
-  // }
-  
   
   // renderPage(event: number) {
   //   this.currentPage = event;

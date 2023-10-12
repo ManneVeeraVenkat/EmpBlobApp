@@ -12,8 +12,12 @@ export class GetEmployeedetailsComponent implements OnInit {
   employeeId: number | null = null;
   employee !: employee
   employees !: employee[];
+
+  employeeImage: string| null=null;
+
   constructor(private service: EmpBlobServiceService, private route: ActivatedRoute,
     private router: Router) { }
+
   ngOnInit(): void {
     const employeeIdParam = this.route.snapshot.paramMap.get('employeeId');
     if (employeeIdParam !== null) {
@@ -23,10 +27,12 @@ export class GetEmployeedetailsComponent implements OnInit {
       console.error(`Employee name parameter not found.`);
     }
   }
+
   loadEmployeeDetails(employeeId: number) {
-    this.service.ViewEmployeeData(employeeId).subscribe(employee => {
-      if (employee) {
-        this.employee = employee
+    this.service.ViewEmployeeData(employeeId).subscribe((data)=>{
+       if (data && data.employeeData) {
+          this.employee = data.employeeData;
+          this.employeeImage = data.profilePicture;
       }
       else {
         console.error(`Employee with full name ${employeeId} not found.`);

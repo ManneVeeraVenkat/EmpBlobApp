@@ -18,29 +18,39 @@ export class EmpBlobServiceService {
   
    constructor(private http: HttpClient) { }
 
-  uploadEmployeeData(employee: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/addEmployee`, employee)
+  // uploadEmployeeData(employee: any): Observable<any> {
+  //   return this.http.post(`${this.apiUrl}/addEmployee`, employee)
+
+  // }
+  uploadEmployeeDataWithProfile(formData: FormData): Observable<any> {
+    return this.http.post(`${this.apiUrl}/uploadEmployeeWithProfilePic`, formData);
+  }
+  
+
+  ViewEmployeeData(employeeId:number):Observable<any>{
+    return this.http.get<any>(`${this.apiUrl}/employeeDetails?employeId=${employeeId}`)
 
   }
-
-  ViewEmployeeData(employeeId:number):Observable<employee>{
-    return this.http.get<employee>(`${this.apiUrl}/employeeId?employeId=${employeeId}`)
+  GetEmployeeData(employeeId:number):Observable<any>{
+    return this.http.get<any>(`${this.apiUrl}/employeeId?employeId=${employeeId}`)
 
   }
- 
-  UpdateEmployee(employeeId:number, employee:employee):Observable<any>{
-    // const employeeName = `${employee.firstName} ${employee.lastName}`;
-
-  // Send the full name as part of the request URL
-  return this.http.put(`${this.apiUrl}/${employeeId}`, employee);
+  updateEmployeeWithProfilePic(employeeId: number, formData: FormData): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/updateEmployeeWithProfilePic/${employeeId}`, formData);
   }
+  // UpdateEmployee(employeeId:number, employee:employee):Observable<any>{
+  //   // const employeeName = `${employee.firstName} ${employee.lastName}`;
+
+  // // Send the full name as part of the request URL
+  // return this.http.put(`${this.apiUrl}/${employeeId}`, employee);
+  // }
 
   getAllEmployees(): Observable<employee[]> {
     return this.http.get<employee[]>(`${this.apiUrl}/GetAllemployees`)
   }
 
   deleteEmployee(employeeId:number){
-    return this.http.delete<employee>(`${this.apiUrl}/employeeId?employeeId=${employeeId}`)
+    return this.http.delete<employee>(`${this.apiUrl}/deleteEmployee?employeeId=${employeeId}`)
   }
  
 }

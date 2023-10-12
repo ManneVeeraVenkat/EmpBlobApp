@@ -8,5 +8,5 @@ export class employee{
     location !: string
     skill !: string
     salary!: number
-    profilePic!: string;
+   
 }
